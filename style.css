@@ -14,9 +14,9 @@
 }
 #img {
   align-self: center;
-  width: 550px;
-  height: 600px;
-  margin: 25px;
+  width: 450px;
+  height: 400px;
+  margin: 12.5%;
   border-radius: 25px;
   -webkit-box-shadow: 0px 0px 98px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 98px 0px rgba(0,0,0,0.75);

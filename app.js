@@ -15,6 +15,6 @@ function changeAttribute() {
   setTimeout(() => {
   let img = document.getElementById('img')
   img.setAttribute("src", imageUrl)
-  }, 500);
+  }, 1000);
   
 }
