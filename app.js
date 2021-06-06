@@ -1,20 +1,14 @@
-// var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-const http = new XMLHttpRequest()
-const ReqUrl = 'https://api.thecatapi.com/v1/images/search';
 
-let answer
-let imageUrl
+
+const reqUrl = 'https://api.thecatapi.com/v1/images/search';
+var img = document.getElementById('img')
 
 function changeAttribute() {
-  http.open('GET', ReqUrl)
-  http.send()
-  http.onload = () => {
-  answer = http.response
-  imageUrl = JSON.parse(answer)["0"].url
-}
-  setTimeout(() => {
-  let img = document.getElementById('img')
-  img.setAttribute("src", imageUrl)
-  }, 1000);
-  
+  fetch(reqUrl)
+    .then(res => res.json())
+    .then(res => res[0].url)
+    .then((data) => {
+      img.setAttribute('src', data)
+    })
+
 }
